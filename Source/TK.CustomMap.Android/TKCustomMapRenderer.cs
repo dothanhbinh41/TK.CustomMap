@@ -244,7 +244,8 @@ namespace TK.CustomMap.Droid
                     _clusterManager = new ClusterManager(Context, _googleMap);
                     _clusterManager.Renderer = new TKMarkerRenderer(Context, _googleMap, _clusterManager, this);
                 }
-
+                CustomInfoWindowGoogleMap customInfoWindow = new CustomInfoWindowGoogleMap(Context);
+                _googleMap.SetInfoWindowAdapter(customInfoWindow);
                 _googleMap.MarkerClick += OnMarkerClick;
                 _googleMap.MapClick += OnMapClick;
                 _googleMap.MapLongClick += OnMapLongClick;
