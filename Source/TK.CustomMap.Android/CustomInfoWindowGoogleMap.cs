@@ -25,32 +25,20 @@ namespace TK.CustomMap.Droid
             this.context = context;
         }
         public View GetInfoContents(Marker marker)
-        {
-            return null;
+        { 
+            var title = new TextView(context)
+            {
+                Text = marker.Title
+            };
+            title.SetTextSize(Android.Util.ComplexUnitType.Sp, 15);
+            title.SetTextColor(Color.ParseColor("#2D6BAE")); 
+             
+            return title;
         }
 
         public View GetInfoWindow(Marker marker)
         {
-            var layout = new LinearLayout(context)
-            {
-                Orientation = Orientation.Vertical
-            };
-            var title = new TextView(context)
-            {
-                Text = marker.Title,
-                TextSize = context.ToPixels(12)
-            }; 
-            title.SetTextColor(Color.ParseColor("#2D6BAE"));
-            var snippet = new TextView(context)
-            {
-                Text = marker.Snippet,
-                TextSize = context.ToPixels(12)
-            };
-            snippet.SetTextColor(Color.ParseColor("#2D6BAE"));
-              
-            layout.AddView(title);
-            layout.AddView(snippet);
-            return layout;
+            return null;
         }
     }
 }
