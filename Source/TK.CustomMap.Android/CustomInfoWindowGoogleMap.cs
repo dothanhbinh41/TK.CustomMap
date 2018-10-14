@@ -30,9 +30,9 @@ namespace TK.CustomMap.Droid
             {
                 Text = marker.Title
             };
-            title.SetTextSize(Android.Util.ComplexUnitType.Sp, 15);
-            title.SetTextColor(Color.ParseColor("#2D6BAE")); 
-             
+            title.SetTextSize(Android.Util.ComplexUnitType.Sp, 16); 
+            title.SetTextColor(Color.ParseColor("#2D6BAE"));
+
             return title;
         }
 
